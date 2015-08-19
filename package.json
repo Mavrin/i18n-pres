@@ -1,0 +1,33 @@
+{
+  "name": "taucharts-technical-preview",
+  "version": "1.0.0",
+  "description": "\"tauchart technical preview\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mavrin/tauChart-technical-preview.git"
+  },
+  "author": "Konstantin Krivelenia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mavrin/tauChart-technical-preview/issues"
+  },
+  "homepage": "https://github.com/Mavrin/tauChart-technical-preview#readme",
+  "dependencies": {
+    "shower-core": "^1.0.7",
+    "shower-ribbon": "^1.0.11"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-bump": "0.0.15",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-compress": "^0.11.0",
+    "grunt-contrib-copy": "^0.5.0",
+    "grunt-gh-pages": "^0.9.1",
+    "grunt-text-replace": "^0.3.12",
+    "load-grunt-tasks": "^0.6.0"
+  }
+}
