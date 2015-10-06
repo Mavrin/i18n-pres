@@ -29,19 +29,19 @@
         <h2>Что такое интернационализация?</h2>
     </div>
 </section>
-<section>
+<section class="slide">
     <div>
         Интернационализа́ция (англ. internationalization) — технологические приёмы разработки, упрощающие адаптацию
         продукта (такого как программное или аппаратное обеспечение) к языковым и культурным особенностям региона
         (регионов), отличного от того, в котором разрабатывался продукт.
     </div>
 </section>
-<section>
+<section class="slide">
     <div>
         <h2>Что такое локализация?</h2>
     </div>
 </section>
-<section>
+<section class="slide">
     <div>
         Локализация — это добавление специальных функций для использования в некотором определённом регионе.
     </div>
@@ -51,14 +51,277 @@
         <h2>Зачем нужна интернационализация?</h2>
     </div>
 </section>
-<section>
+<section class="slide">
     <div><h2>251 страна</h2></div>
 </section>
-<section>
+<section class="slide">
     <div><h2>3000-6000 языков</h2></div>
 </section>
-<section>
-    <div><h2>Новые пользоватили</h2></div>
+<section class="slide">
+    <div><h2>Новые пользователи</h2></div>
+</section>
+<section class="slide">
+    <div>
+        <h2>Различие локалей:</h2>
+        <ul>
+            <li class="next">Фразы (tree - дерево - дрэва)</li>
+            <li class="next">Числа (3,7 - 3.7)</li>
+            <li class="next">Даты (31.10.2015 - 10.31.2015)</li>
+            <li class="next">Направление текста и размещение блоков
+                <!--примеры-->
+                <ul>
+                    <li>Справа на лево</li>
+                    <li>Слево на право</li>
+                    <li>Сверху вниз</li>
+                    <li>Другое...</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2>Проблемы и решения</h2>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2>Фразы</h2>
+        <ul>
+            <li class="next">Часто хитрим и делаем фиксированый размер (пример)</li>
+            <li class="next">Шрифты. Не все шрифты хорошо отображаются хорошо на разных языках (пример)</li>
+            <li class="next">Формы (падежи, род, числетельные)</li>
+        </ul>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2>Решение</h2>
+        <ul>
+            <li class="next">Динамичные блоки</li>
+            <li class="next">Проверям шрифт при локализации (пример google fonts)</li>
+            <li class="next">Подходы к решению проблемы форм(l10n). Подробно про ICU Message format</li>
+        </ul>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2>Числа и даты</h2>
+        <ul>
+            <li class="next">Где взять форматы?</li>
+            <li class="next">Спасибо браузерам intl api. (ссылка и пример)</li>
+        </ul>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2>Safari not supported</h2>
+
+        <p>Есть полифил (ссылка)</p>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2>Направление текста и размещение блоков</h2>
+        <ul>
+            <li class="next">Для текста используем css (Описать свойства)</li>
+            <li class="next">С блоками хуже. Но может помочь postCss (ссылка на плагин)</li>
+        </ul>
+    </div>
+</section>
+<section class="slide shout">
+    <div>
+        <h2>Давайте перейдем к коду</h2>
+    </div>
+</section>
+<section class="slide shout">
+    <div>
+        Обозначение локалей и стандарты (несколько слайдев)
+    </div>
+</section>
+<section class="slide">
+    <div>
+        (примеры локализацие различными тулами)
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2>Как хранить ключи к переводу</h2>
+        <ul>
+            <li>Синтетические ключи</li>
+            <li>Ключами является оригинальная фраза</li>
+        </ul>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2>Синтетические ключи</h2>
+        <div>
+            <pre>
+                var dict =  {
+                  greeting.message:'Hello world'
+                };
+                var message = __(greeting.message);
+            </pre>
+        </div>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2>Проблемы</h2>
+        <div>
+           Именнование ключей. Видеть оригинальную фразу как программисту так и переводчику. Медленная разработка.
+        </div>
+        <h2>Плюсы</h2>
+        <div>
+            Ключи всегда доступны.
+            Легко развезать контекст.
+        </div>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2>Ключами является оригинальная фраза</h2>
+        <div>
+            <pre>
+                var message = __('Hello world');
+                /**
+                Метод ищет фразу в некотором dict, если не нашел возвращает оригинальную фразу
+                **/
+            </pre>
+        </div>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2>Проблемы</h2>
+        <div>
+            Как достать все строки. Развязывание контекста. Быстая разарботка.
+        </div>
+        <h2>Плюсы</h2>
+        <div>
+            Именнование ключей.
+            Видеть оригинальную фразу как программисту так и переводчику.
+        </div>
+    </div>
+</section>
+<section class="slide shout">
+    <div>
+        <h2>Наш путь оригинальныя фразы</h2>
+    </div>
+</section>
+<section class="slide shout">
+    <div>
+        <h2>Решаем проблемы</h2>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        (пример кода с шаблон, javascript, react)
+        <h2>Парсим шаблоны и код https://github.com/TargetProcess/tau-extract-gettext</h2>
+        <p>
+            для шаблонов и js регулярки, jsx Ast getToken
+        </p>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2>Задаем скоуп для компонета, шаблона, js файла (пример)</h2>
+        <p>
+            его используем при генерации словаря.
+        </p>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2>У нас есть словарь, что делать дальше, где хранить?</h2>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2>JSON files отдельный пакет (bower, npm)</h2>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        (пример ленивого подключения словаря)
+    </div>
+</section>
+<section class="slide">
+    <div>
+        Репозиторий удобно для разрабочика не удобно для переводчика
+    </div>
+</section>
+<section class="slide">
+    <div>
+       Загружаем словарь в систему перевода (Примеры систем)
+    </div>
+</section>
+<section class="slide">
+    <div>
+        Пишем сервер который забирает из системы перевода и публикует пакет
+    </div>
+</section>
+<section class="slide">
+    <div>
+        При выпуске новой версии меняе версию пакета.
+    </div>
+</section>
+<section class="slide">
+    <div>
+        Пример как это делается у нас на проекте. Запуск задач на CI
+    </div>
+</section>
+<section class="slide shout">
+    <div>
+        Безопасность.
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <p>Переводчик может добавить script вашу фразу</p>
+        Было бы хорошо, если бы все фразы были строками.
+        <pre>
+            _.escape('script alert("Ха")script полезная фраза ') // все хорошо
+        </pre>
+        На практике имеем
+        <pre>
+            <b>Внимаение!</b> Вы хотите это сделать? script alert("Ха") script // XSS во фразе с форматированием
+            <b>Кликни меня!</b> Вы хотите это сделать? script alert("Ха") script // XSS в необходимой навесить событие
+        </pre>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        Санитайзим текст по белому списку.
+    </div>
+</section>
+<section class="slide">
+    <div>
+        Если необходимо использовать обрабчик делаем следуещее
+        (пример через класс в обычных шаблонах и через formatMessage в React)
+    </div>
+</section>
+<section class="slide">
+    <div>
+        Все мы люди. Вдруг мы что-то заэскепили.
+        Поможет инструментация, кода запускаем тесты с XSS инъекциями.
+    </div>
+</section>
+<section class="slide shout">
+    <div>
+        Забытое, но важное.
+    </div>
+</section>
+<section class="slide">
+    <div>
+        Думайте над оригинальными фразами. Не усложняте. Ссылки на гайды написания фраз.
+    </div>
+</section>
+<section class="slide">
+    <div>
+        Личная просьба. Не используете флаги для выбора языков пишите язык на целевом языке.
+    </div>
 </section>
 <section class="slide shout">
     <h2>Вопросы?</h2>
