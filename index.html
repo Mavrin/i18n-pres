@@ -6,7 +6,20 @@
     <meta name="viewport" content="width=792, user-scalable=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <link rel="stylesheet" href="node_modules/shower-ribbon/styles/screen.css">
+    <style>
+        .slide .px-100.px-100 {
+            font-size: 100px;
+        }
+
+        .slide .px-90.px-90 {
+            font-size: 90px;
+        }
+        .slide .px-50.px-50 {
+            font-size: 50px;
+        }
+    </style>
 </head>
+
 <body class="list">
 <!--
     Debug class on <body> enables
@@ -19,14 +32,41 @@
 
     <p>Компания <a href="http://www.targetprocess.com">Taucraft</a></p>
 </header>
-<section class="slide shout">
+<section class="slide">
     <div>
-        <h2>Примеры ошибок при локализации</h2>
+        О себе (...)
+        <h2>Контакты</h2>
+        <a style="background:url(pictures/twitter-bird-light-bgs.png) no-repeat;padding-left:40px;"
+           href="https://twitter.com/Krivlenia">Twitter (https://twitter.com/Krivlenia/)</a><br>
+        <a style="background:url(pictures/GitHub-Mark-32px.png) no-repeat;padding-left:40px;"
+           href="https://github.com/Mavrin">Github (https://github.com/Mavrin/)</a><br>
+        <a style="background:url(pictures/habrahabr.png) center left no-repeat;padding-left:20px;"
+           href="http://habrahabr.ru/users/mavrin/">Хабр (http://habrahabr.ru/users/mavrin/)</a><br>
     </div>
 </section>
 <section class="slide shout">
     <div>
-        <h2>Что такое интернационализация?</h2>
+        <h2 class="px-100">Проблемы локализации</h2>
+    </div>
+</section>
+<section class="slide shout">
+    <div>
+        <h2 class="px-50">Аudi TT Coupe. «Tete coupe» во Франции означает «отрубленная голова».</h2>
+    </div>
+</section>
+<section class="slide shout">
+    <div>
+        <h2 class="px-50">Fiat Uno не пользовалась популярностью в Финляндии. «Уно» (на итальянском – первый) по-фински означает «кретин».</h2>
+    </div>
+</section>
+<section class="slide shout">
+    <div>
+        <h2 class="px-50">Chevrolet Nova – «Но ва» означает «не едет» по-испански.</h2>
+    </div>
+</section>
+<section class="slide shout">
+    <div>
+        <h2 class="px-100">Что такое интернационализация?</h2>
     </div>
 </section>
 <section class="slide">
@@ -36,9 +76,9 @@
         (регионов), отличного от того, в котором разрабатывался продукт.
     </div>
 </section>
-<section class="slide">
+<section class="slide shout">
     <div>
-        <h2>Что такое локализация?</h2>
+        <h2 class="px-100">Что такое локализация?</h2>
     </div>
 </section>
 <section class="slide">
@@ -48,17 +88,22 @@
 </section>
 <section class="slide shout">
     <div>
-        <h2>Зачем нужна интернационализация?</h2>
+        <h2 class="px-100">Зачем нужна интернационализация?</h2>
     </div>
 </section>
-<section class="slide">
-    <div><h2>251 страна</h2></div>
+<section class="slide cover">
+    <div>
+        <img width="100%" src="./pictures/1361262517_stena-priznaniy-v-lyubvi.jpg" alt="i love you"/>
+    </div>
 </section>
-<section class="slide">
-    <div><h2>3000-6000 языков</h2></div>
+<section class="slide shout">
+    <div><h2 class="px-100">251 страна</h2></div>
 </section>
-<section class="slide">
-    <div><h2>Новые пользователи</h2></div>
+<section class="slide shout">
+    <div><h2 class="px-100">3000-6000 языков</h2></div>
+</section>
+<section class="slide shout">
+    <div><h2 class="px-100">Новые пользователи</h2></div>
 </section>
 <section class="slide">
     <div>
@@ -79,17 +124,20 @@
         </ul>
     </div>
 </section>
-<section class="slide">
+<section class="slide shout">
     <div>
-        <h2>Проблемы и решения</h2>
+        <h2 class="px-100">Проблемы и решения</h2>
     </div>
 </section>
 <section class="slide">
     <div>
         <h2>Фразы</h2>
         <ul>
-            <li class="next">Часто хитрим и делаем фиксированый размер (пример)</li>
-            <li class="next">Шрифты. Не все шрифты хорошо отображаются хорошо на разных языках (пример)</li>
+            <li class="next">Часто хитрим и делаем фиксированый размер <img
+                        style="height: 100px; vertical-align: middle;" src="./pictures/css-modules-logo.png"
+                        alt="css modules logo"/></li>
+            <li class="next">Шрифты. Не все шрифты хорошо отображаются на разных языках <img
+                        style="vertical-align: middle;" src="./pictures/font-error.png" alt="font-error"/></li>
             <li class="next">Формы (падежи, род, числетельные)</li>
         </ul>
     </div>
@@ -99,69 +147,271 @@
         <h2>Решение</h2>
         <ul>
             <li class="next">Динамичные блоки</li>
-            <li class="next">Проверям шрифт при локализации (пример google fonts)</li>
-            <li class="next">Подходы к решению проблемы форм(l10n). Подробно про ICU Message format</li>
+            <li class="next">Проверям шрифт при локализации <a
+                        href="https://www.google.com/fonts#UsePlace:use/Collection:Open+Sans">google fonts</a></li>
+            <li class="next">Подходы к решению проблемы форм (<a
+                        href="https://github.com/eligrey/l10n.js/#readme">l10n</a>, <a href="http://l20n.org/">l20n</a>,
+                <a
+                        href="http://formatjs.io/">ICU message format</a> и др.).
+            </li>
         </ul>
     </div>
 </section>
 <section class="slide">
     <div>
-        <h2>Числа и даты</h2>
-        <ul>
-            <li class="next">Где взять форматы?</li>
-            <li class="next">Спасибо браузерам intl api. (ссылка и пример)</li>
-        </ul>
+        <h2>ICU message format</h2>
+        <h5>Select</h5>
+        <pre>
+            <code>
+                {gender, select,
+                male {He}
+                female {She}
+                other {They}
+                } will respond shortly.
+            </code>
+        </pre>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2>ICU message format</h2>
+        <h5><a href="http://www.unicode.org/cldr/charts/latest/supplemental/language_plural_rules.html">Plural</a></h5>
+        <pre>
+            <code>
+                You have {itemCount, plural,
+                =0 {no items}
+                one {1 item}
+                other {{itemCount} items}
+                }.
+            </code>
+        </pre>
+    </div>
+</section>
+<section class="slide shout">
+    <div>
+        <h2 class="px-100"><a href="http://formatjs.io/">Formatjs</a></h2>
+    </div>
+</section>
+<section class="slide shout">
+    <div>
+        <h2 class="px-100">Числа и даты</h2>
+    </div>
+</section>
+<section class="slide shout">
+    <div>
+        <h2 class="px-100">Где взять форматы?</h2>
+    </div>
+</section>
+<section class="slide shout">
+    <div>
+        <h2 class="px-90">Спасибо браузерам <a
+                    href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Intl">intl</a>
+            api.</h2>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2>window.intl</h2>
+        Объект Intl является пространством имён для API интернационализации ECMAScript, предосталяющим языко-зависимое
+        сравнение строк, форматирование чисел и дат со временем. Конструкторы объектов Collator, NumberFormat и
+        DateTimeFormat являются свойствами объекта Intl. На этой странице описаны эти свойства, а также общая
+        функциональность конструкторов интернационализации и других языко-зависимых функций.
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2>Intl.Collator</h2>
+        <pre>
+            <code style="font-size: 15px">
+                var collator = new Intl.Collator();
+                console.log(collator.compare('a', 'c')); // → отрицательное значение
+                console.log(collator.compare('c', 'a')); // → положительное значение
+                console.log(collator.Collator().compare('a', 'a')); // → 0
+                // В немецком буква ä идёт рядом с буквой a
+                console.log(new Intl.Collator('de').compare('ä', 'z'));
+                // → отрицательное значение
+                // В шведском буква ä следует после буквы z
+                console.log(new Intl.Collator('sv').compare('ä', 'z'));
+                // → положительное значение
+            </code>
+        </pre>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2>Intl.DateTimeFormat</h2>
+        <pre>
+            <code style="font-size: 15px">
+                var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+                // Форматирование ниже предполагает, что местный часовой пояс равен
+                // America/Los_Angeles для локали США
+                // В америкаском английском используется порядок месяц-день-год
+                console.log(new Intl.DateTimeFormat('en-US').format(date));
+                // → "12/19/2012"
+                // В британском английском используется порядок день-месяц-год
+                console.log(new Intl.DateTimeFormat('en-GB').format(date));
+                // → "20/12/2012"
+                // В корейском используется порядок год-месяц-день
+                console.log(new Intl.DateTimeFormat('ko-KR').format(date));
+                // → "2012. 12. 20."
+            </code>
+        </pre>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2>Intl.NumberFormat</h2>
+        <pre>
+            <code style="font-size: 15px">
+                var number = 123456.789;
+                // В Германии в качестве разделителя целой и дробной части используется запятая, а в качестве
+                разделителя разрядов - точка
+                console.log(new Intl.NumberFormat('de-DE').format(number));
+                // → 123.456,789
+                // В России в качестве разделителя целой и дробной части используется запятая, а в качестве разделителя
+                разрядов - пробел
+                console.log(new Intl.NumberFormat('ru-RU').format(number));
+                // → 123 456,789
+                // В большинстве арабоговорящих стран используют настоящие арабские цифры
+                console.log(new Intl.NumberFormat('ar-EG').format(number));
+                // → ١٢٣٤٥٦٫٧٨٩
+            </code>
+        </pre>
     </div>
 </section>
 <section class="slide">
     <div>
         <h2>Safari not supported</h2>
 
-        <p>Есть полифил (ссылка)</p>
-    </div>
-</section>
-<section class="slide">
-    <div>
-        <h2>Направление текста и размещение блоков</h2>
-        <ul>
-            <li class="next">Для текста используем css (Описать свойства)</li>
-            <li class="next">С блоками хуже. Но может помочь postCss (ссылка на плагин)</li>
-        </ul>
+        <p>Но есть полифил <a href="https://github.com/andyearnshaw/Intl.js">Intl.js</a></p>
     </div>
 </section>
 <section class="slide shout">
     <div>
-        <h2>Давайте перейдем к коду</h2>
-    </div>
-</section>
-<section class="slide shout">
-    <div>
-        Обозначение локалей и стандарты (несколько слайдев)
+        <h2 class="px-100">Направление текста и размещение блоков</h2>
     </div>
 </section>
 <section class="slide">
     <div>
-        (примеры локализацие различными тулами)
+        <h2>Направление текста</h2>
+        <span style="direction: ltr">Слево направо</span>
+        <pre>
+            direction: ltr
+        </pre>
+        <span style="unicode-bidi:bidi-override;direction: rtl">Справо налево</span>
+        <pre>
+            unicode-bidi:bidi-override;direction: rtl
+        </pre>
+        <span style="float:right;writing-mode:vertical-lr;-webkit-writing-mode:vertical-lr">Сверху вниз</span>
+        <pre style="float:left;">
+            writing-mode:vertical-lr
+        </pre>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2>Размещение блоков</h2>
+        <img src="./pictures/ru-wiki.png" style="width: 784px" alt=""/>
+        <img src="./pictures/ar-wiki.png" style="width: 784px" alt=""/>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2>С блоками сложнее.</h2>
+        Но есть postCss <a href="https://github.com/MohammadYounes/rtlcss">плагин</a>
+        <pre style="font-size: 15px">
+.example {
+  display:inline-block;
+  padding:5px 10px 15px 20px;
+  margin:5px 10px 15px 20px;
+  border-style:dotted dashed double solid;
+  border-width:1px 2px 3px 4px;
+  border-color:red green blue black;
+  box-shadow: -1em 0 0.4em gray, 3px 3px 30px black;
+}
+        </pre>
+         <pre style="font-size: 15px">
+.example {
+  display:inline-block;
+  padding:5px 10px 15px 20px;
+  margin:5px 10px 15px 20px;
+  border-style:dotted dashed double solid;
+  border-width:1px 2px 3px 4px;
+  border-color:red green blue black;
+  box-shadow: -1em 0 0.4em gray, 3px 3px 30px black;
+}
+        </pre>
+    </div>
+</section>
+<section class="slide shout">
+    <div>
+        <h2 class="px-100"><a href="http://webstandardsdays.ru/2014/05/24/pres/i18n-l20n/">Фреймворки локализации</a>
+        </h2>
+    </div>
+</section>
+
+<section class="slide shout">
+    <div>
+        <h2 class="px-100">Давайте перейдем к коду</h2>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2>Обозначение локалей и стандарты</h2>
+
+        <div>
+            <a href="http://tools.ietf.org/html/rfc5646">BCP 47</a>
+
+            <div>zh-Hans-CN</div>
+            код языка, код письменности и код страны
+            т. е. <br/>
+            "zh-Hans-CN": упрощённый китайский, используемый в Китае.
+        </div>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2>Основной принцип работы библиотек</h2>
+
+        <div>
+            <pre>
+                <code style="font-size: 17px">
+                    var locale = 'ru';
+                    localize(keys.hello, locale);
+                    var dict = {
+                    ru: {
+                    hello:'Привет мир'
+                    },
+                    default: {
+                    hello:'Hello world'
+                    }
+                    };
+                </code>
+            </pre>
+        </div>
     </div>
 </section>
 <section class="slide">
     <div>
         <h2>Как хранить ключи к переводу</h2>
         <ul>
-            <li>Синтетические ключи</li>
-            <li>Ключами является оригинальная фраза</li>
+            <li class="next">Синтетические ключи</li>
+            <li class="next">Ключами является оригинальная фраза</li>
         </ul>
     </div>
 </section>
 <section class="slide">
     <div>
         <h2>Синтетические ключи</h2>
+
         <div>
             <pre>
-                var dict =  {
-                  greeting.message:'Hello world'
-                };
-                var message = __(greeting.message);
+                <code>
+                    var dict = {
+                    greeting.message:'Hello world'
+                    };
+                    var message = __(greeting.message);
+                </code>
             </pre>
         </div>
     </div>
@@ -169,25 +419,54 @@
 <section class="slide">
     <div>
         <h2>Проблемы</h2>
+
         <div>
-           Именнование ключей. Видеть оригинальную фразу как программисту так и переводчику. Медленная разработка.
+            <ul>
+                <li class="next">
+                    Именнование ключей.
+                </li>
+                <li class="next">
+                    Видеть оригинальную фразу как программисту так и переводчику.
+                </li>
+                <li class="next">
+                    Медленная разработка.
+                </li>
+            </ul>
         </div>
+    </div>
+</section>
+<section class="slide">
+    <div>
         <h2>Плюсы</h2>
+
         <div>
-            Ключи всегда доступны.
-            Легко развезать контекст.
+            <ul>
+                <li class="next">
+                    Ключи всегда доступны.
+                </li>
+                <li class="next">
+                    Легко управлять контекстом. (пример toDo)
+                </li>
+                <li class="next">
+                    Медленная разработка.
+                </li>
+            </ul>
         </div>
     </div>
 </section>
 <section class="slide">
     <div>
         <h2>Ключами является оригинальная фраза</h2>
+
         <div>
             <pre>
-                var message = __('Hello world');
-                /**
-                Метод ищет фразу в некотором dict, если не нашел возвращает оригинальную фразу
-                **/
+                <code>
+                    var message = __('Hello world');
+                    /**
+                    Метод ищет фразу в некотором dict,
+                    если не нашел возвращает оригинальную фразу
+                    **/
+                </code>
             </pre>
         </div>
     </div>
@@ -195,51 +474,138 @@
 <section class="slide">
     <div>
         <h2>Проблемы</h2>
+
         <div>
-            Как достать все строки. Развязывание контекста. Быстая разарботка.
+            <ul>
+                <li class="next">
+                    Как достать все строки для формирование словаря.
+                </li>
+                <li class="next">
+                    Развязывание контекста.
+                </li>
+            </ul>
         </div>
+    </div>
+</section>
+<section class="slide">
+    <div>
         <h2>Плюсы</h2>
+
         <div>
-            Именнование ключей.
-            Видеть оригинальную фразу как программисту так и переводчику.
+            <ul>
+                <li class="next">
+                    Именнование ключей.
+                </li>
+                <li class="next">
+                    Видеть оригинальную фразу как программисту так и переводчику.
+                </li>
+                <li class="next">
+                    Быстая разарботка.
+                </li>
+            </ul>
         </div>
     </div>
 </section>
 <section class="slide shout">
     <div>
-        <h2>Наш путь оригинальныя фразы</h2>
+        <h2 class="px-90">Наш путь оригинальные фразы</h2>
     </div>
 </section>
 <section class="slide shout">
     <div>
-        <h2>Решаем проблемы</h2>
+        <h2 class="px-100">Решаем проблемы</h2>
+    </div>
+</section>
+<section class="slide shout">
+    <div>
+        <h2 class="px-90">К примеру у нас есть следующий код</h2>
     </div>
 </section>
 <section class="slide">
     <div>
-        (пример кода с шаблон, javascript, react)
-        <h2>Парсим шаблоны и код https://github.com/TargetProcess/tau-extract-gettext</h2>
+        <h2>HTML</h2>
+        <pre>
+            <code style="font-size: 14px">
+                &lt;span class="ui-label-remain ui-progressbar__data__remain"&gt;
+                &lt;%= fn.intl.formatHTMLMessage('Remain {timeRemain}',
+                {
+                timeRemain: '&lt;b class="value"&gt;' + this.timeRemain + 'h&lt;/b&gt;'
+                }
+                ) %&gt;
+                &lt;/span&gt;
+            </code>
+        </pre>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2>React</h2>
+        <pre>
+            <code>
+                &lt;FormattedMessage message="Action required"/&gt;
+            </code>
+        </pre>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2>JavaScript</h2>
+        <pre>
+            <code style="font-size: 13px">
+                var tooltipTextMap = {
+                'board': intl.formatMessage('Make this View visible to all or selected teams'),
+                'group': intl.formatMessage('Make this Group visible to all or selected teams')
+                };
+            </code>
+        </pre>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2>Парсим шаблоны и код</h2>
+        <a href="https://github.com/TargetProcess/tau-extract-gettext">tau-extract-gettext</a>
+
         <p>
-            для шаблонов и js регулярки, jsx Ast getToken
+            Работает на регулярных выражения и любви. Для jsx используется AST parser.
         </p>
     </div>
 </section>
 <section class="slide">
     <div>
-        <h2>Задаем скоуп для компонета, шаблона, js файла (пример)</h2>
-        <p>
-            его используем при генерации словаря.
-        </p>
+        <h2>Задаем скоуп для компонета, шаблона, js файла</h2>
+        <ul>
+            <li class="next">Файл на уровне компонета .scope.json</li>
+            <li class="next">Комментарием в JavaScript файле // intlScope:'customScope'</li>
+            <li class="next">Комментарием в JavaScript файле &lt;!--intlScope:customScope--&gt;</li>
+        </ul>
     </div>
 </section>
 <section class="slide">
     <div>
-        <h2>У нас есть словарь, что делать дальше, где хранить?</h2>
+        <h2>Результат</h2>
+        <pre>
+            <code>
+                {
+                scope1:["Add"],
+                scope2:["Add"]
+                }
+            </code>
+        </pre>
     </div>
 </section>
-<section class="slide">
+<section class="slide shout">
     <div>
-        <h2>JSON files отдельный пакет (bower, npm)</h2>
+        <h2 class="px-90">Запускаем скрипт выдернивания словарей перед запуском тестов</h2>
+    </div>
+</section>
+<section class="slide shout">
+    <div>
+        <h2 style="font-size: 80px">У нас есть словарь, что делать дальше, где хранить?</h2>
+    </div>
+</section>
+<section class="slide shout">
+    <div>
+        <h2 class="px-90">JSON файлы в отдельном пакет (bower, npm)</h2>
     </div>
 </section>
 <section class="slide">
@@ -247,34 +613,44 @@
         (пример ленивого подключения словаря)
     </div>
 </section>
-<section class="slide">
+<section class="slide shout">
     <div>
-        Репозиторий удобно для разрабочика не удобно для переводчика
+        <h2 class="px-90">Репозиторий удобно для разрабочика, не удобно для переводчика</h2>
     </div>
 </section>
 <section class="slide">
     <div>
-       Загружаем словарь в систему перевода (Примеры систем)
-    </div>
-</section>
-<section class="slide">
-    <div>
-        Пишем сервер который забирает из системы перевода и публикует пакет
-    </div>
-</section>
-<section class="slide">
-    <div>
-        При выпуске новой версии меняе версию пакета.
-    </div>
-</section>
-<section class="slide">
-    <div>
-        Пример как это делается у нас на проекте. Запуск задач на CI
+        <h2>Загружаем словарь в систему перевода</h2>
+        <ul>
+            <li class="next"><a href="https://www.transifex.com/">https://www.transifex.com/</a></li>
+            <li class="next"><a href="https://crowdin.com/">https://crowdin.com/</a></li>
+            <li class="next"><a href="https://phraseapp.com/en">https://phraseapp.com/</a></li>
+            <li class="next"><a href="https://unbabel.com/">https://unbabel.com/</a></li>
+            <li class="next"><a href="http://stackshare.io/translation-service">Подборка других сервисов.</a></li>
+        </ul>
     </div>
 </section>
 <section class="slide shout">
     <div>
-        Безопасность.
+        <h2 style="font-size: 70px">
+            Пишем <a href="https://github.com/TargetProcess/transifex-github-integration-web">сервис</a>, который
+            забирает
+            из системы перевода и публикует пакет
+        </h2>
+    </div>
+</section>
+<section class="slide shout">
+    <div>
+        <h2 style="font-size: 80px">
+            При выпуске новой версии продукта, меняем версию пакета.
+        </h2>
+    </div>
+</section>
+<section class="slide shout">
+    <div>
+        <h2>
+            Безопасность.
+        </h2>
     </div>
 </section>
 <section class="slide">
@@ -286,14 +662,16 @@
         </pre>
         На практике имеем
         <pre>
-            <b>Внимаение!</b> Вы хотите это сделать? script alert("Ха") script // XSS во фразе с форматированием
-            <b>Кликни меня!</b> Вы хотите это сделать? script alert("Ха") script // XSS в необходимой навесить событие
+            <code style="font-size: 12px">
+&lt;b&gt;Внимание!&lt;/b&gt; Вы хотите это сделать? &lt;script&gt;alert("Ха") // XSS во фразе с форматированием&lt;/script&gt;
+&lt;b&gt;Кликни меня!&lt;/b&gt; Вы хотите это сделать? &lt;script&gt;alert("Ха")// XSS нужно навесить событие на элемент&lt;/script&gt;
+            </code>
         </pre>
     </div>
 </section>
-<section class="slide">
+<section class="slide shout">
     <div>
-        Санитайзим текст по белому списку.
+        <h2 class="px-100">Санитайзим текст по белому списку.</h2>
     </div>
 </section>
 <section class="slide">
@@ -304,18 +682,19 @@
 </section>
 <section class="slide">
     <div>
-        Все мы люди. Вдруг мы что-то заэскепили.
-        Поможет инструментация, кода запускаем тесты с XSS инъекциями.
+        <p>Все мы люди.</p>
+        <p>Вдруг мы что-то заэскепили.</p>
+        <p>Поможет инструментация, когда запускаем тесты с XSS инъекциями.</p>
     </div>
 </section>
 <section class="slide shout">
     <div>
-        Забытое, но важное.
+        <h2>Забытое, но важное.</h2>
     </div>
 </section>
 <section class="slide">
     <div>
-        Думайте над оригинальными фразами. Не усложняте. Ссылки на гайды написания фраз.
+        Думайте над оригинальными фразами. Не усложняте. Материал дизайн <a href="https://www.google.com/design/spec/style/writing.html">writing guide</a>
     </div>
 </section>
 <section class="slide">
