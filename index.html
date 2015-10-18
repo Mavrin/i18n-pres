@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=792, user-scalable=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <link rel="stylesheet" href="node_modules/shower-ribbon/styles/screen.css">
+    <link rel="stylesheet" href="node_modules/highlightjs/styles/default.css"/>
     <style>
         .slide .px-100.px-100 {
             font-size: 100px;
@@ -14,6 +15,7 @@
         .slide .px-90.px-90 {
             font-size: 90px;
         }
+
         .slide .px-50.px-50 {
             font-size: 50px;
         }
@@ -56,7 +58,8 @@
 </section>
 <section class="slide shout">
     <div>
-        <h2 class="px-50">Fiat Uno не пользовалась популярностью в Финляндии. «Уно» (на итальянском – первый) по-фински означает «кретин».</h2>
+        <h2 class="px-50">Fiat Uno не пользовалась популярностью в Финляндии. «Уно» (на итальянском – первый) по-фински
+            означает «кретин».</h2>
     </div>
 </section>
 <section class="slide shout">
@@ -115,8 +118,8 @@
             <li class="next">Направление текста и размещение блоков
                 <!--примеры-->
                 <ul>
-                    <li>Справа на лево</li>
-                    <li>Слево на право</li>
+                    <li>Справа налево</li>
+                    <li>Слево направо</li>
                     <li>Сверху вниз</li>
                     <li>Другое...</li>
                 </ul>
@@ -161,15 +164,15 @@
     <div>
         <h2>ICU message format</h2>
         <h5>Select</h5>
-        <pre>
-            <code>
-                {gender, select,
-                male {He}
-                female {She}
-                other {They}
-                } will respond shortly.
-            </code>
-        </pre>
+<pre>
+    <code>
+        {gender, select,
+        male {He}
+        female {She}
+        other {They}
+        } will respond shortly.
+    </code>
+</pre>
     </div>
 </section>
 <section class="slide">
@@ -663,8 +666,10 @@
         На практике имеем
         <pre>
             <code style="font-size: 12px">
-&lt;b&gt;Внимание!&lt;/b&gt; Вы хотите это сделать? &lt;script&gt;alert("Ха") // XSS во фразе с форматированием&lt;/script&gt;
-&lt;b&gt;Кликни меня!&lt;/b&gt; Вы хотите это сделать? &lt;script&gt;alert("Ха")// XSS нужно навесить событие на элемент&lt;/script&gt;
+                &lt;b&gt;Внимание!&lt;/b&gt; Вы хотите это сделать? &lt;script&gt;alert("Ха") // XSS во фразе с
+                форматированием&lt;/script&gt;
+                &lt;b&gt;Кликни меня!&lt;/b&gt; Вы хотите это сделать? &lt;script&gt;alert("Ха")// XSS нужно навесить
+                событие на элемент&lt;/script&gt;
             </code>
         </pre>
     </div>
@@ -683,7 +688,9 @@
 <section class="slide">
     <div>
         <p>Все мы люди.</p>
+
         <p>Вдруг мы что-то заэскепили.</p>
+
         <p>Поможет инструментация, когда запускаем тесты с XSS инъекциями.</p>
     </div>
 </section>
@@ -694,7 +701,8 @@
 </section>
 <section class="slide">
     <div>
-        Думайте над оригинальными фразами. Не усложняте. Материал дизайн <a href="https://www.google.com/design/spec/style/writing.html">writing guide</a>
+        Думайте над оригинальными фразами. Не усложняте. Материал дизайн <a
+                href="https://www.google.com/design/spec/style/writing.html">writing guide</a>
     </div>
 </section>
 <section class="slide">
@@ -724,6 +732,17 @@
     <div></div>
 </div>
 <script src="node_modules/shower-core/shower.min.js"></script>
+<script src="node_modules/highlightjs/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlighting();
+    /*(function () {
+        var each = [].forEach
+        each.call(document.querySelectorAll('pre code'), function (block) {
+            debugger
+            hljs.highlightBlock(block);
+        });
+    }())*/
+</script>
 <!-- Copyright © 2013 Yours Truly, Famous Inc. -->
 </body>
 </html>
