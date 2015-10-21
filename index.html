@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=792, user-scalable=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <link rel="stylesheet" href="node_modules/shower-ribbon/styles/screen.css">
-    <link rel="stylesheet" href="node_modules/highlightjs/styles/default.css"/>
+    <link rel="stylesheet" href="node_modules/highlightjs/styles/tomorrow.css"/>
     <style>
         .slide .px-100.px-100 {
             font-size: 100px;
@@ -15,7 +15,15 @@
         .slide .px-90.px-90 {
             font-size: 90px;
         }
-
+        .slide .px-80.px-80 {
+            font-size: 80px;
+        }
+        .slide .px-70.px-70 {
+            font-size: 70px;
+        }
+        .slide .px-60.px-60 {
+            font-size: 60px;
+        }
         .slide .px-50.px-50 {
             font-size: 50px;
         }
@@ -36,40 +44,58 @@
 </header>
 <section class="slide">
     <div>
-        О себе (...)
-        <h2>Контакты</h2>
-        <a style="background:url(pictures/twitter-bird-light-bgs.png) no-repeat;padding-left:40px;"
-           href="https://twitter.com/Krivlenia">Twitter (https://twitter.com/Krivlenia/)</a><br>
-        <a style="background:url(pictures/GitHub-Mark-32px.png) no-repeat;padding-left:40px;"
-           href="https://github.com/Mavrin">Github (https://github.com/Mavrin/)</a><br>
-        <a style="background:url(pictures/habrahabr.png) center left no-repeat;padding-left:20px;"
-           href="http://habrahabr.ru/users/mavrin/">Хабр (http://habrahabr.ru/users/mavrin/)</a><br>
+        <h2>Немного о себе</h2>
+        <div style="display: flex">
+            <div><img align="left" style="padding-right: 20px" src="pictures/64lMqg7R6g4.jpg" alt=""/></div>
+            <div>Разрабочик в <a href="http://crew.taucraft.com/">Taucraft</a>.<br/>
+                Мейнтейнер опенсорсной JavaScript-библиотеки чартов <a href="http://taucharts.com/">Taucharts</a>. <br/>
+                <a
+                        style="background:url(pictures/twitter-bird-light-bgs.png) no-repeat;padding-left:40px;"
+                        href="https://twitter.com/Krivlenia">Twitter (https://twitter.com/Krivlenia/)</a><br>
+                <a style="background:url(pictures/GitHub-Mark-32px.png) no-repeat;padding-left:40px;"
+                   href="https://github.com/Mavrin">Github (https://github.com/Mavrin/)</a><br>
+                <a style="background:url(pictures/habrahabr.png) center left no-repeat;padding-left:20px;"
+                   href="http://habrahabr.ru/users/mavrin/">Хабр (http://habrahabr.ru/users/mavrin/)</a><br></div>
+        </div>
     </div>
 </section>
 <section class="slide shout">
     <div>
-        <h2 class="px-100">Проблемы локализации</h2>
+        <h2 class="px-100">Трудности локализации</h2>
+    </div>
+</section>
+<section class="slide cover">
+    <div>
+        <img src="pictures/audi-tts-coupe-2.jpg" alt=""/>
+        <h2 style="color: white" class="px-50">Аudi TT Coupe</h2>
+    </div>
+</section>
+<section class="slide shout">
+    <div><h2  class="px-60">По-французки &mdash; «отрубленная голова»</h2></div>
+</section>
+<section class="slide cover">
+    <div>
+        <h2 style="color: white" class="px-50">Fiat Uno</h2>
+        <img width="100%" src="pictures/fiat-uno-mille-eletronic-1992-1994-02-1.jpg" alt=""/>
+    </div>
+</section>
+<section class="slide shout">
+    <div><h2  class="px-70">По-фински &mdash; «кретин»</h2></div>
+</section>
+<section class="slide cover">
+    <div>
+        <img src="pictures/chevrolet-nova-ss-11.jpg" width="100%" alt=""/>
+        <h2 style="color: white" class="px-50">Chevrolet Nova</h2>
     </div>
 </section>
 <section class="slide shout">
     <div>
-        <h2 class="px-50">Аudi TT Coupe. «Tete coupe» во Франции означает «отрубленная голова».</h2>
+        <h2 class="px-50">По-испански &mdash; «Но ва» означает «не едет».</h2>
     </div>
 </section>
 <section class="slide shout">
     <div>
-        <h2 class="px-50">Fiat Uno не пользовалась популярностью в Финляндии. «Уно» (на итальянском – первый) по-фински
-            означает «кретин».</h2>
-    </div>
-</section>
-<section class="slide shout">
-    <div>
-        <h2 class="px-50">Chevrolet Nova – «Но ва» означает «не едет» по-испански.</h2>
-    </div>
-</section>
-<section class="slide shout">
-    <div>
-        <h2 class="px-100">Что такое интернационализация?</h2>
+        <h2 class="px-70">Что такое интернационализация?</h2>
     </div>
 </section>
 <section class="slide">
@@ -81,17 +107,18 @@
 </section>
 <section class="slide shout">
     <div>
-        <h2 class="px-100">Что такое локализация?</h2>
+        <h2 class="px-80">Что такое локализация?</h2>
     </div>
 </section>
 <section class="slide">
     <div>
-        Локализация — это добавление специальных функций для использования в некотором определённом регионе.
+        Локализация — процесс адаптации программного обеспечения к культуре какой-либо страны.
+        Как частность — перевод пользовательского интерфейса, документации и сопутствующих файлов программного обеспечения с одного языка на другой.
     </div>
 </section>
 <section class="slide shout">
     <div>
-        <h2 class="px-100">Зачем нужна интернационализация?</h2>
+        <h2 class="px-60">Зачем нужна интернационализация?</h2>
     </div>
 </section>
 <section class="slide cover">
@@ -103,7 +130,7 @@
     <div><h2 class="px-100">251 страна</h2></div>
 </section>
 <section class="slide shout">
-    <div><h2 class="px-100">3000-6000 языков</h2></div>
+    <div><h2 class="px-90">3000-6000 языков</h2></div>
 </section>
 <section class="slide shout">
     <div><h2 class="px-100">Новые пользователи</h2></div>
@@ -149,7 +176,7 @@
     <div>
         <h2>Решение</h2>
         <ul>
-            <li class="next">Динамичные блоки</li>
+            <li class="next">Динамичиские блоки</li>
             <li class="next">Проверям шрифт при локализации <a
                         href="https://www.google.com/fonts#UsePlace:use/Collection:Open+Sans">google fonts</a></li>
             <li class="next">Подходы к решению проблемы форм (<a
@@ -165,12 +192,12 @@
         <h2>ICU message format</h2>
         <h5>Select</h5>
 <pre>
-    <code>
-        {gender, select,
+    <code class="nohighlight">
+    {gender, select,
         male {He}
         female {She}
         other {They}
-        } will respond shortly.
+    } will respond shortly.
     </code>
 </pre>
     </div>
@@ -180,19 +207,19 @@
         <h2>ICU message format</h2>
         <h5><a href="http://www.unicode.org/cldr/charts/latest/supplemental/language_plural_rules.html">Plural</a></h5>
         <pre>
-            <code>
-                You have {itemCount, plural,
-                =0 {no items}
-                one {1 item}
-                other {{itemCount} items}
-                }.
+            <code class="nohighlight">
+    You have {itemCount, plural,
+        =0 {no items}
+        one {1 item}
+        other {{itemCount} items}
+    }.
             </code>
         </pre>
     </div>
 </section>
 <section class="slide shout">
     <div>
-        <h2 class="px-100"><a href="http://formatjs.io/">Formatjs</a></h2>
+        <h2 class="px-50"><a href="http://formatjs.io/">Formatjs</a> от <img style="vertical-align: middle; height: 1em;" src="pictures/yahoo.svg" alt=""/></h2>
     </div>
 </section>
 <section class="slide shout">
@@ -207,7 +234,7 @@
 </section>
 <section class="slide shout">
     <div>
-        <h2 class="px-90">Спасибо браузерам <a
+        <h2 class="px-70">Спасибо браузерам <a
                     href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Intl">intl</a>
             api.</h2>
     </div>
@@ -225,17 +252,17 @@
     <div>
         <h2>Intl.Collator</h2>
         <pre>
-            <code style="font-size: 15px">
-                var collator = new Intl.Collator();
-                console.log(collator.compare('a', 'c')); // → отрицательное значение
-                console.log(collator.compare('c', 'a')); // → положительное значение
-                console.log(collator.Collator().compare('a', 'a')); // → 0
-                // В немецком буква ä идёт рядом с буквой a
-                console.log(new Intl.Collator('de').compare('ä', 'z'));
-                // → отрицательное значение
-                // В шведском буква ä следует после буквы z
-                console.log(new Intl.Collator('sv').compare('ä', 'z'));
-                // → положительное значение
+            <code style="font-size: 15px" class="javascript">
+    var collator = new Intl.Collator();
+    console.log(collator.compare('a', 'c')); // → отрицательное значение
+    console.log(collator.compare('c', 'a')); // → положительное значение
+    console.log(collator.Collator().compare('a', 'a')); // → 0
+    // В немецком буква ä идёт рядом с буквой a
+    console.log(new Intl.Collator('de').compare('ä', 'z'));
+    // → отрицательное значение
+    // В шведском буква ä следует после буквы z
+    console.log(new Intl.Collator('sv').compare('ä', 'z'));
+    // → положительное значение
             </code>
         </pre>
     </div>
@@ -244,19 +271,19 @@
     <div>
         <h2>Intl.DateTimeFormat</h2>
         <pre>
-            <code style="font-size: 15px">
-                var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
-                // Форматирование ниже предполагает, что местный часовой пояс равен
-                // America/Los_Angeles для локали США
-                // В америкаском английском используется порядок месяц-день-год
-                console.log(new Intl.DateTimeFormat('en-US').format(date));
-                // → "12/19/2012"
-                // В британском английском используется порядок день-месяц-год
-                console.log(new Intl.DateTimeFormat('en-GB').format(date));
-                // → "20/12/2012"
-                // В корейском используется порядок год-месяц-день
-                console.log(new Intl.DateTimeFormat('ko-KR').format(date));
-                // → "2012. 12. 20."
+            <code style="font-size: 15px" class="javascript">
+    var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+    // Форматирование ниже предполагает, что местный часовой пояс равен
+    // America/Los_Angeles для локали США
+    // В американском английском используется порядок месяц-день-год
+    console.log(new Intl.DateTimeFormat('en-US').format(date));
+    // → "12/19/2012"
+    // В британском английском используется порядок день-месяц-год
+    console.log(new Intl.DateTimeFormat('en-GB').format(date));
+    // → "20/12/2012"
+    // В корейском используется порядок год-месяц-день
+    console.log(new Intl.DateTimeFormat('ko-KR').format(date));
+    // → "2012. 12. 20."
             </code>
         </pre>
     </div>
@@ -266,48 +293,79 @@
         <h2>Intl.NumberFormat</h2>
         <pre>
             <code style="font-size: 15px">
-                var number = 123456.789;
-                // В Германии в качестве разделителя целой и дробной части используется запятая, а в качестве
-                разделителя разрядов - точка
-                console.log(new Intl.NumberFormat('de-DE').format(number));
-                // → 123.456,789
-                // В России в качестве разделителя целой и дробной части используется запятая, а в качестве разделителя
-                разрядов - пробел
-                console.log(new Intl.NumberFormat('ru-RU').format(number));
-                // → 123 456,789
-                // В большинстве арабоговорящих стран используют настоящие арабские цифры
-                console.log(new Intl.NumberFormat('ar-EG').format(number));
-                // → ١٢٣٤٥٦٫٧٨٩
+    var number = 123456.789;
+    // В Германии в качестве разделителя целой и дробной части используется запятая, а в качестве
+    // разделителя разрядов - точка
+    console.log(new Intl.NumberFormat('de-DE').format(number));
+    // → 123.456,789
+    // В России в качестве разделителя целой и дробной части используется запятая, а в качестве разделителя
+    // разрядов - пробел
+    console.log(new Intl.NumberFormat('ru-RU').format(number));
+    // → 123 456,789
+    // В большинстве арабоговорящих стран используют настоящие арабские цифры
+    console.log(new Intl.NumberFormat('ar-EG').format(number));
+    // → ١٢٣٤٥٦٫٧٨٩
             </code>
         </pre>
     </div>
 </section>
 <section class="slide">
     <div>
-        <h2>Safari not supported</h2>
+        <h2><img style="height: 1em; vertical-align: middle" src="pictures/safari.svg" alt=""/> Safari not supported</h2>
 
         <p>Но есть полифил <a href="https://github.com/andyearnshaw/Intl.js">Intl.js</a></p>
     </div>
 </section>
 <section class="slide shout">
     <div>
-        <h2 class="px-100">Направление текста и размещение блоков</h2>
+        <h2 class="px-90">Направление текста и размещение блоков</h2>
     </div>
 </section>
 <section class="slide">
     <div>
         <h2>Направление текста</h2>
-        <span style="direction: ltr">Слево направо</span>
+        <div>
+            <div style="direction: ltr">Слево направо</div>
+            <div style="unicode-bidi:bidi-override;direction: rtl">Справо налево</div>
+            <div style="float:left;writing-mode:vertical-lr;-webkit-writing-mode:vertical-lr">Сверху вниз</div>
+        </div>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2 style="direction: ltr">Слево направо</h2>
         <pre>
-            direction: ltr
+            <code class="css">
+    {
+       direction: ltr;
+    }
+            </code>
+
         </pre>
-        <span style="unicode-bidi:bidi-override;direction: rtl">Справо налево</span>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2 style="unicode-bidi:bidi-override;direction: rtl">Справо налево</h2>
         <pre>
-            unicode-bidi:bidi-override;direction: rtl
+            <code class="css">
+    {
+        unicode-bidi:bidi-override;
+        direction: rtl;
+    }
+            </code>
         </pre>
-        <span style="float:right;writing-mode:vertical-lr;-webkit-writing-mode:vertical-lr">Сверху вниз</span>
-        <pre style="float:left;">
-            writing-mode:vertical-lr
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2 style="float:left;writing-mode:vertical-lr;-webkit-writing-mode:vertical-lr">Сверху вниз</h2>
+        <pre>
+            <code class="css">
+    {
+        writing-mode:vertical-lr
+    }
+            </code>
         </pre>
     </div>
 </section>
@@ -320,9 +378,11 @@
 </section>
 <section class="slide">
     <div>
-        <h2>С блоками сложнее.</h2>
-        Но есть postCss <a href="https://github.com/MohammadYounes/rtlcss">плагин</a>
-        <pre style="font-size: 15px">
+        <h2>С блоками сложнее</h2>
+        Но есть <a href="https://github.com/postcss/postcss">PostCSS</a> <a href="https://github.com/MohammadYounes/rtlcss">плагин</a>
+        <div style="display: flex">
+           <pre style="font-size: 11px;">
+            <code class="css">
 .example {
   display:inline-block;
   padding:5px 10px 15px 20px;
@@ -332,30 +392,42 @@
   border-color:red green blue black;
   box-shadow: -1em 0 0.4em gray, 3px 3px 30px black;
 }
+            </code>
         </pre>
-         <pre style="font-size: 15px">
+            <span style="align-self: center;padding:30px;margin: 0 0 49px;">→</span>
+         <pre style="font-size: 11px;">
+              <code class="css">
 .example {
   display:inline-block;
-  padding:5px 10px 15px 20px;
-  margin:5px 10px 15px 20px;
-  border-style:dotted dashed double solid;
-  border-width:1px 2px 3px 4px;
-  border-color:red green blue black;
-  box-shadow: -1em 0 0.4em gray, 3px 3px 30px black;
+  padding:5px 20px 15px 10px;
+  margin:5px 20px 15px 10px;
+  border-style:dotted solid double dashed;
+  border-width:1px 4px 3px 2px;
+  border-color:red black blue green;
+  box-shadow: 1em 0 0.4em gray, -3px 3px 30px black;
 }
+              </code>
         </pre>
+        </div>
     </div>
 </section>
-<section class="slide shout">
+<section class="slide">
     <div>
-        <h2 class="px-100"><a href="http://webstandardsdays.ru/2014/05/24/pres/i18n-l20n/">Фреймворки локализации</a>
+        <h2 class="px-500">
+            Больше примеров и подробностей.
         </h2>
+        <p>
+          Доклад Анотна Немцева на WSD <a href="http://webstandardsdays.ru/2014/05/24/pres/i18n-l20n/">Фреймворки локализации</a>
+        </p>
+        <div style="display: flex">
+            <img style="margin: auto;height: 260px;" src="pictures/hex.svg" alt=""/>
+        </div>
     </div>
 </section>
 
 <section class="slide shout">
     <div>
-        <h2 class="px-100">Давайте перейдем к коду</h2>
+        <h2 class="px-80">Давайте перейдем к коду</h2>
     </div>
 </section>
 <section class="slide">
@@ -378,17 +450,17 @@
 
         <div>
             <pre>
-                <code style="font-size: 17px">
-                    var locale = 'ru';
-                    localize(keys.hello, locale);
-                    var dict = {
-                    ru: {
-                    hello:'Привет мир'
-                    },
-                    default: {
-                    hello:'Hello world'
-                    }
-                    };
+                <code class="javascript" style="font-size: 17px">
+var locale = 'ru';
+localize(keys.hello, locale);
+var dict = {
+    ru: {
+        hello:'Привет мир'
+    },
+    default: {
+        hello:'Hello world'
+    }
+};
                 </code>
             </pre>
         </div>
@@ -409,11 +481,11 @@
 
         <div>
             <pre>
-                <code>
-                    var dict = {
-                    greeting.message:'Hello world'
-                    };
-                    var message = __(greeting.message);
+                <code class="javascript">
+var dict = {
+    greeting.message:'Hello world'
+};
+var message = __(greeting.message);
                 </code>
             </pre>
         </div>
@@ -463,12 +535,12 @@
 
         <div>
             <pre>
-                <code>
-                    var message = __('Hello world');
-                    /**
-                    Метод ищет фразу в некотором dict,
-                    если не нашел возвращает оригинальную фразу
-                    **/
+                <code class="javascript">
+var message = __('Hello world');
+/**
+Метод ищет фразу в некотором dict,
+если не нашел возвращает оригинальную фразу
+**/
                 </code>
             </pre>
         </div>
@@ -528,14 +600,14 @@
     <div>
         <h2>HTML</h2>
         <pre>
-            <code style="font-size: 14px">
-                &lt;span class="ui-label-remain ui-progressbar__data__remain"&gt;
-                &lt;%= fn.intl.formatHTMLMessage('Remain {timeRemain}',
-                {
-                timeRemain: '&lt;b class="value"&gt;' + this.timeRemain + 'h&lt;/b&gt;'
-                }
-                ) %&gt;
-                &lt;/span&gt;
+            <code style="font-size: 14px" class="scala">
+&lt;span class="ui-label-remain ui-progressbar__data__remain"&gt;
+    &lt;%= fn.intl.formatHTMLMessage('Remain {timeRemain}',
+        {
+        timeRemain: '&lt;b class="value"&gt;' + this.timeRemain + 'h&lt;/b&gt;'
+        }
+    ) %&gt;
+&lt;/span&gt;
             </code>
         </pre>
     </div>
@@ -544,8 +616,8 @@
     <div>
         <h2>React</h2>
         <pre>
-            <code>
-                &lt;FormattedMessage message="Action required"/&gt;
+            <code class="xml">
+    &lt;FormattedMessage message="Action required"/&gt;
             </code>
         </pre>
     </div>
@@ -554,11 +626,11 @@
     <div>
         <h2>JavaScript</h2>
         <pre>
-            <code style="font-size: 13px">
-                var tooltipTextMap = {
-                'board': intl.formatMessage('Make this View visible to all or selected teams'),
-                'group': intl.formatMessage('Make this Group visible to all or selected teams')
-                };
+            <code style="font-size: 15px" class="javascript">
+  var tooltipTextMap = {
+    'board': intl.formatMessage('Make this View visible to all or selected teams'),
+    'group': intl.formatMessage('Make this Group visible to all or selected teams')
+  };
             </code>
         </pre>
     </div>
@@ -587,11 +659,11 @@
     <div>
         <h2>Результат</h2>
         <pre>
-            <code>
-                {
-                scope1:["Add"],
-                scope2:["Add"]
-                }
+            <code class="json">
+        {
+            "scope1":["Add"],
+            "scope2":["Add"]
+        }
             </code>
         </pre>
     </div>
@@ -736,12 +808,12 @@
 <script>
     hljs.initHighlighting();
     /*(function () {
-        var each = [].forEach
-        each.call(document.querySelectorAll('pre code'), function (block) {
-            debugger
-            hljs.highlightBlock(block);
-        });
-    }())*/
+     var each = [].forEach
+     each.call(document.querySelectorAll('pre code'), function (block) {
+     debugger
+     hljs.highlightBlock(block);
+     });
+     }())*/
 </script>
 <!-- Copyright © 2013 Yours Truly, Famous Inc. -->
 </body>
