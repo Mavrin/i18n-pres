@@ -29,7 +29,7 @@ module.exports = function (grunt) {
 					expand: true,
 					cwd: 'node_modules/highlightjs/',
 					src: [
-						'styles/default.css',
+						'styles/tomorrow.css',
 						'highlight.pack.min.js',
 					],
 					dest: 'temp/pres/highlightjs/'
