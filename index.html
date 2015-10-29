@@ -71,7 +71,7 @@
     </div>
 </section>
 <section class="slide shout">
-    <div><h2  class="px-60">По-французки &mdash; «отрубленная голова»</h2></div>
+    <div><h2  class="px-60">По-французcки &mdash; «отрубленная голова»</h2></div>
 </section>
 <section class="slide cover">
     <div>
@@ -98,24 +98,24 @@
         <h2 class="px-70">Что такое интернационализация?</h2>
     </div>
 </section>
-<section class="slide">
+<!--<section class="slide">
     <div>
         Интернационализа́ция (англ. internationalization) — технологические приёмы разработки, упрощающие адаптацию
         продукта (такого как программное или аппаратное обеспечение) к языковым и культурным особенностям региона
         (регионов), отличного от того, в котором разрабатывался продукт.
     </div>
-</section>
+</section>-->
 <section class="slide shout">
     <div>
         <h2 class="px-80">Что такое локализация?</h2>
     </div>
 </section>
-<section class="slide">
+<!--<section class="slide">
     <div>
         Локализация — процесс адаптации программного обеспечения к культуре какой-либо страны.
         Как частность — перевод пользовательского интерфейса, документации и сопутствующих файлов программного обеспечения с одного языка на другой.
     </div>
-</section>
+</section>-->
 <section class="slide shout">
     <div>
         <h2 class="px-60">Зачем нужна интернационализация?</h2>
@@ -140,8 +140,9 @@
         <h2>Различие локалей:</h2>
         <ul>
             <li class="next">Фразы (tree - дерево - дрэва)</li>
-            <li class="next">Числа (3,7 - 3.7)</li>
-            <li class="next">Даты (31.10.2015 - 10.31.2015)</li>
+            <li class="next">Числа (123.456,789 - 123 456,789)</li>
+            <li class="next">Валюта (123.456,79 € - ￥123,457)</li>
+            <li class="next">Даты (1.10.2015 20.00 - 10-1-2015 8 pm)</li>
             <li class="next">Направление текста и размещение блоков
                 <!--примеры-->
                 <ul>
@@ -187,6 +188,11 @@
         </ul>
     </div>
 </section>
+<section class="slide cover">
+    <div>
+        <img style="top: 144px;" src="pictures/fonts.png" alt=""/>
+    </div>
+</section>
 <section class="slide">
     <div>
         <h2>Формат сообщений ICU</h2>
@@ -205,8 +211,10 @@
 <section class="slide">
     <div>
         <h2>Формат сообщений ICU</h2>
-        <h5><a href="http://www.unicode.org/cldr/charts/latest/supplemental/language_plural_rules.html">Plural</a></h5>
-        <pre>
+        <h5><a href="http://www.unicode.org/cldr/charts/latest/supplemental/language_plural_rules.html">Plural
+            (CLDR - Common Locale Data Repository)</a></h5>
+        <span>cardinal (количественные числительные), ordinal (порядковые числительные), range (промежуток)</span>
+        <pre style="font-size: 24px;">
             <code class="nohighlight">
     You have {itemCount, plural,
         =0 {no items}
@@ -215,6 +223,62 @@
     }.
             </code>
         </pre>
+    </div>
+</section>
+<section class="slide">
+    <style>
+        table, td{
+            border: 1px solid #bbb !important;
+            padding:0 10px;
+        }
+        .slide table td {
+            background: none !important;
+        }
+        .slide table td.target:nth-child(2),.slide table td.target:nth-child(1) {
+            vertical-align: middle;
+        }
+        .source-t {
+            vertical-align: middle;
+        }
+    </style>
+    <div>
+        <h2>Английский: порядковые числительные</h2>
+    <table>
+        <tr>
+            <td class="source-t" rowspan="4">ordinal</td>
+            <td class="target">one</td>
+            <td class="target">1, 21, 31, 41, 51, 61, 71, 81, 101, 1001, …</td>
+            <td class="target">Take the 1st right.</td>
+        </tr>
+        <tr>
+            <td class="target">two</td>
+            <td class="target">2, 22, 32, 42, 52, 62, 72, 82, 102, 1002, …</td>
+            <td class="target">Take the 2nd right.</td>
+        </tr>
+        <tr>
+            <td class="target">few</td>
+            <td class="target">3, 23, 33, 43, 53, 63, 73, 83, 103, 1003, …</td>
+            <td class="target">Take the 3rd right.</td>
+        </tr>
+        <tr>
+            <td class="target">other</td>
+            <td class="target">0, 4~18, 100, 1000, 10000, 100000, 1000000, …</td>
+            <td class="target">Take the 4th right.</td>
+        </tr>
+    </table>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2>Русский: порядковые числительные</h2>
+        <table>
+            <tr>
+                <td class="source-t">ordinal</td>
+                <td class="target">other</td>
+                <td class="target">0~15, 100, 1000, 10000, 100000, 1000000, …</td>
+                <td class="target">Сверните направо на 15-м перекрестке.</td>
+            </tr>
+        </table>
     </div>
 </section>
 <section class="slide shout">
@@ -460,7 +524,7 @@ var locale = 'ru';
 localize(keys.hello, locale);
 var dict = {
     ru: {
-        hello:'Привет мир'
+        hello:'Привет, мир'
     },
     default: {
         hello:'Hello world'
@@ -490,7 +554,7 @@ var dict = {
 var dict = {
     'greeting.message':'Hello world'
 };
-var message = __(greeting.message);
+var message = __('greeting.message');
                 </code>
             </pre>
         </div>
@@ -577,7 +641,7 @@ var message = __('Hello world');
                     Видеть оригинальную фразу, как программисту, так и переводчику.
                 </li>
                 <li class="next">
-                    Быстая разработка.
+                    Быстрая разработка.
                 </li>
             </ul>
         </div>
@@ -649,7 +713,7 @@ var message = __('Hello world');
 </section>
 <section class="slide">
     <div>
-        <h2>Задаем контекст для компонета, шаблона, js-файла</h2>
+        <h2>Задаем контекст для компонента, шаблона, js-файла</h2>
         <ul>
             <li class="next">Файл на уровне компонента .scope.json <img style="vertical-align: middle" src="pictures/folder.png" alt=""/></li>
             <li class="next">Комментарием в JavaScript файле <pre><code class="javascript">     // intlScope:'customScope'</code></pre></li>
@@ -708,7 +772,7 @@ var message = __('Hello world');
 </section>
 <section class="slide shout">
     <div>
-        <h2 class="px-60">Репозиторий: удобно для разработчика, не удобно для переводчика.</h2>
+        <h2 class="px-60">Репозиторий: удобно для разработчика, неудобно для переводчика.</h2>
     </div>
 </section>
 <section class="slide">
@@ -757,7 +821,7 @@ var message = __('Hello world');
     <div>
         <p>Было бы хорошо, если бы все фразы были простыми строками.</p>
         <div style="display: flex;height: 300px;">
-            <h2 style="margin: auto">Привет Минск!</h2>
+            <h2 style="margin: auto">Привет, Минск!</h2>
         </div>
     </div>
 </section>
@@ -788,7 +852,7 @@ var message = __('Hello world');
 </section>
 <section class="slide">
     <div>
-        <h2 style="font-size: 40px">Или навесить обрабочик события</h2>
+        <h2 style="font-size: 40px">Или навесить обработчик события</h2>
         <pre>
             <code class="html">
 &lt;b&gt;Кликни меня!&lt;/b&gt; Вы хотите это сделать?
@@ -853,22 +917,22 @@ formatMessage(stringFromDictionary +
 <section class="slide">
     <div>
         <img src="pictures/materialdesign_principles_metaphor.png" style="height: 300px;float: right;" alt=""/>
-        Думайте над оригинальными фразами. Не усложняте. Материальный дизайн <a
+        Думайте над оригинальными фразами. Не&nbsp;усложняйте. Материальный дизайн <a
                 href="https://www.google.com/design/spec/style/writing.html">writing guide</a>.
     </div>
 </section>
 <section class="slide">
     <div>
         <h2>Личная просьба.</h2>
-        <p>Не используйте флаги для выбора языков, пишите язык на целевом языке пользователя.</p>
+        <p>Не&nbsp;используйте флаги для выбора языков, пишите названия язык на целевом языке пользователя.</p>
         <div style="display: flex;align-items: center;">
             <img style="height: 260px;" src="pictures/16208-flags-icon-sets.jpg" alt=""/>
             <span style="align-self: center;padding:30px;margin: 0 0 49px;">→</span>
             <select multiple style="margin-left:80px; height: 150px" name="" id="">
                 <option value="1">English</option>
                 <option value="1">Русский</option>
-                <option value="1">Беларускі</option>
-                <option value="1">Український</option>
+                <option value="1">Беларуская</option>
+                <option value="1">Українська</option>
             </select>
         </div>
     </div>
