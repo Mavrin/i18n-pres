@@ -763,10 +763,10 @@ var message = __('Hello world');
 </section>
 <section class="slide">
     <div>
-        <h2 style="font-size: 40px">Переводчик может добавить script вашу фразу</h2>
+        <h2 style="font-size: 40px">Переводчик может добавить script в вашу фразу</h2>
         <pre style="font-size: 20px">
             <code class="javascript">
-    _.escape('&lt;script&gt; alert("Ха") &lt;script&gt; полезная фраза');
+    _.escape('&lt;script&gt; alert("Ха") &lt;/script&gt; полезная фраза');
     // все хорошо
             </code>
         </pre>
@@ -807,7 +807,7 @@ var message = __('Hello world');
 </section>
 <section class="slide">
     <div>
-        <h2 style="font-size: 40px">Если необходимо использовать обработчик, делаем следуещее</h2>
+        <h2 style="font-size: 40px">Если необходимо использовать обработчик, делаем следующее</h2>
 <pre>
     <code class="html">
 &lt;b class="i-role-action"&gt;Кликни меня!&lt;/b&gt;
@@ -860,7 +860,7 @@ formatMessage(stringFromDictionary +
 <section class="slide">
     <div>
         <h2>Личная просьба.</h2>
-        <p>Не используете флаги для выбора языков пишите язык на целевом языке пользователя.</p>
+        <p>Не используйте флаги для выбора языков, пишите язык на целевом языке пользователя.</p>
         <div style="display: flex;align-items: center;">
             <img style="height: 260px;" src="pictures/16208-flags-icon-sets.jpg" alt=""/>
             <span style="align-self: center;padding:30px;margin: 0 0 49px;">→</span>
