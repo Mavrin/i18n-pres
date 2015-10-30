@@ -782,6 +782,26 @@ var message = __('Hello world');
 </section>
 <section class="slide shout">
     <div>
+        <h2 class="px-70">Что с серверными сообщениями?</h2>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2>Все на клиенте</h2>
+<pre>
+    <code class="javascript">
+var response = {
+    message: "You add {count} user story.",
+    data: {count: 10}
+}
+intl.formatMessage(response.message, data);
+// You add 10 user story.
+    </code>
+</pre>
+    </div>
+</section>
+<section class="slide shout">
+    <div>
         <h2 class="px-70">Что дальше, где хранить?</h2>
     </div>
 </section>
