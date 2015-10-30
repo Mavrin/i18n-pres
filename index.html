@@ -42,6 +42,11 @@
 
     <p>Компания <a href="http://www.targetprocess.com">Taucraft</a></p>
 </header>
+<section class="slide shout">
+    <div>
+        <h2><a href="https://goo.gl/AC3jyS">goo.gl/AC3jyS</a></h2>
+    </div>
+</section>
 <section class="slide">
     <div>
         <h2>Немного о себе</h2>
@@ -145,7 +150,7 @@
         <ul>
             <li class="next">Фразы (tree — дерево — дрэва)</li>
             <li class="next">Числа (123.456,789 — 123 456,789)</li>
-            <li class="next">Валюта (123.456,79 € — ￥123,457)</li>
+            <li class="next">Валюта (123.456,79 € — €123,456.79)</li>
             <li class="next">Даты (1.10.2015 20.00 — 10-1-2015 8 pm)</li>
             <li class="next">Направление текста и размещение блоков
                 <!--примеры-->
@@ -359,7 +364,7 @@
     <div>
         <h2><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat">Intl.NumberFormat</a> <img src="pictures/mdn.svg" style="height: 1em;vertical-align: middle;" alt=""/></h2>
         <pre>
-            <code style="font-size: 15px">
+            <code class="javascript" style="font-size: 15px">
     var number = 123456.789;
     // В Германии в качестве разделителя целой и дробной части используется запятая,
     // а в качестве разделителя разрядов - точка
@@ -372,6 +377,43 @@
     // В большинстве арабоговорящих стран используют настоящие арабские цифры
     console.log(new Intl.NumberFormat('ar-EG').format(number));
     // → ١٢٣٤٥٦٫٧٨٩
+            </code>
+        </pre>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat">Intl.NumberFormat</a> <img src="pictures/mdn.svg" style="height: 1em;vertical-align: middle;" alt=""/></h2>
+        <pre>
+            <code class="javascript" style="font-size: 19px">
+var number = 123456.789;
+// Запрашиваем формат валюты
+console.log(new Intl.NumberFormat('de-DE',
+    { style: 'currency', currency: 'EUR' }).format(number)
+);
+// → 123.456,79 €
+console.log(new Intl.NumberFormat('en-IN',
+    { style: 'currency', currency: 'EUR' }
+).format(number));
+// → €123,456.79
+            </code>
+        </pre>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2><a href="https://www.npmjs.com/package/intl-relativeformat">intl-relativeformat</a> <img src="pictures/github-octocat.svg" style="height: 1em;vertical-align: middle;" alt=""/></h2>
+        <pre>
+            <code class="javascript" style="font-size: 19px">
+var english = new IntlRelativeFormat('en-US');
+var russian = new IntlRelativeFormat('en-US');
+var post = {
+    id   : 1,
+    title: 'Some Blog Post',
+    date : new Date(1426271670524)
+};
+console.log(english.format(post.date)); // => "3 hours ago"
+console.log(russian.format(post.date)); // => "3 часа назад"
             </code>
         </pre>
     </div>
@@ -487,7 +529,7 @@
 <section class="slide">
     <div>
         <h2 class="px-500">
-            Больше примеров и подробностей
+            Еще примеры
         </h2>
         <p>
           Доклад <a href="http://webstandardsdays.ru/2014/05/24/pres/i18n-l20n/">Фреймворки локализации</a> Антона Немцева на WSD
@@ -731,19 +773,11 @@ var message = __('Hello world');
         <pre>
             <code class="json">
         {
-            "scope1":["Add"],
-            "scope2":["Add"]
+            "menu":["group"],
+            "users":["group"]
         }
             </code>
         </pre>
-    </div>
-</section>
-<section class="slide shout">
-    <div>
-        <img  style="position: absolute; top: 0;" src="pictures/jenkins.svg" alt=""/>
-        <img style="position: absolute;bottom: 0;right: 389px;" src="pictures/travis-ci.svg" alt=""/>
-        <img style="position: absolute;right: 61px; height:300px; top: 0;" src="pictures/logo_teamcity.svg" alt=""/>
-        <h2 class="px-60" >Запускаем скрипт для извлечения строк в CI</h2>
     </div>
 </section>
 <section class="slide shout">
@@ -756,7 +790,7 @@ var message = __('Hello world');
         <img  style="position: absolute; top: 80px;" src="pictures/npm.svg" alt=""/>
         <img style="position: absolute;bottom: 20px;right: 389px;" src="pictures/bower.svg" alt=""/>
         <img style="position: absolute;right: 61px;top: 0;" src="pictures/jspm.svg" alt=""/>
-        <h2 class="px-50">JSON-файлы в отдельном пакете</h2>
+        <h2 class="px-50">JSON-файлы переводов в отдельном пакете</h2>
     </div>
 </section>
 <section class="slide">
@@ -795,12 +829,25 @@ var message = __('Hello world');
         </ul>
     </div>
 </section>
+<section class="slide cover">
+    <div>
+        <img width="100%" style="top: 72px;" src="pictures/transifex_int.png" alt=""/>
+    </div>
+</section>
 <section class="slide shout">
     <div>
         <h2 style="font-size: 50px">
             Пишем <a href="https://github.com/TargetProcess/transifex-github-integration-web">сервис</a><br>
             <img style="height: 1em; vertical-align: middle" src="pictures/github-octocat.svg" alt=""/> автоматизации процесса
         </h2>
+    </div>
+</section>
+<section class="slide shout">
+    <div>
+        <img  style="position: absolute; top: 33px; height: 237px" src="pictures/jenkins.svg" alt=""/>
+        <img style="position: absolute; height: 209px;bottom: 44px; right: 389px;" src="pictures/travis-ci.svg" alt=""/>
+        <img style="position: absolute;right: 61px; height:300px; top: 0;" src="pictures/logo_teamcity.svg" alt=""/>
+        <h2 class="px-60" >Запускаем сервисы с помощью CI</h2>
     </div>
 </section>
 <section class="slide">
@@ -848,12 +895,22 @@ var message = __('Hello world');
 <section class="slide">
     <div>
         <h2 style="font-size: 40px">Иногда нужно форматирование</h2>
+        <pre style="font-size: 36px;">
+            <code class="html">
+&lt;b&gt;Attention!&lt;/b&gt; Remove this task?
+            </code>
+        </pre>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2 style="font-size: 40px">В словаре перевода</h2>
         <pre>
             <code class="html">
-&lt;b&gt;Внимание!&lt;/b&gt; Вы хотите это сделать?
+&lt;b&gt;Внимание!&lt;/b&gt; Удалить эту задачу?
 &lt;script&gt;
-    alert("Ха")
-    // XSS во фразе с форматированием
+alert("Ха")
+// XSS во фразе с форматированием
 &lt;/script&gt;
             </code>
         </pre>
@@ -862,12 +919,22 @@ var message = __('Hello world');
 <section class="slide">
     <div>
         <h2 style="font-size: 40px">Или навесить обработчик события</h2>
+        <pre style="font-size: 36px;">
+            <code class="html">
+&lt;b&gt;Click me!&lt;/b&gt; Remove this task?
+            </code>
+        </pre>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2 style="font-size: 40px">В словаре перевода</h2>
         <pre>
             <code class="html">
-&lt;b&gt;Кликни меня!&lt;/b&gt; Вы хотите это сделать?
+&lt;b&gt;Кликни меня!&lt;/b&gt;  Удалить эту задачу?
 &lt;script&gt;
-    alert("Ха");
-    // XSS, нужно навесить событие на элемент
+alert("Ха");
+// XSS, нужно навесить событие на элемент
 &lt;/script&gt;
             </code>
         </pre>
@@ -884,6 +951,9 @@ var message = __('Hello world');
 <pre>
     <code class="html">
 &lt;b class="i-role-action"&gt;Кликни меня!&lt;/b&gt;
+
+// В коде приложении навешиваем событие
+
 &lt;script&gt;
    $(".i-role-action").click(()=>{action();})
 &lt;/script&gt;
@@ -946,18 +1016,21 @@ formatMessage(stringFromDictionary +
         </div>
     </div>
 </section>
-<section class="slide shout">
-    <h2>Вопросы?</h2>
-</section>
 <section class="slide">
     <div>
-        <h2>Контакты</h2>
-        <a style="background:url(pictures/twitter-bird-light-bgs.png) no-repeat;padding-left:40px;"
-           href="https://twitter.com/Krivlenia">Twitter (https://twitter.com/Krivlenia/)</a><br>
-        <a style="background:url(pictures/GitHub-Mark-32px.png) no-repeat;padding-left:40px;"
-           href="https://github.com/Mavrin">Github (https://github.com/Mavrin/)</a><br>
-        <a style="background:url(pictures/habrahabr.png) center left no-repeat;padding-left:20px;"
-           href="http://habrahabr.ru/users/mavrin/">Хабр (http://habrahabr.ru/users/mavrin/)</a><br>
+        <h2>Вопросы?</h2>
+        <div>
+            <a class="px-50" href="https://goo.gl/AC3jyS">goo.gl/AC3jyS</a>
+        </div>
+        <div>
+            <h3>Контакты</h3>
+            <a style="background:url(pictures/twitter-bird-light-bgs.png) no-repeat;padding-left:40px;"
+               href="https://twitter.com/Krivlenia">Twitter (https://twitter.com/Krivlenia/)</a><br>
+            <a style="background:url(pictures/GitHub-Mark-32px.png) no-repeat;padding-left:40px;"
+               href="https://github.com/Mavrin">Github (https://github.com/Mavrin/)</a><br>
+            <a style="background:url(pictures/habrahabr.png) center left no-repeat;padding-left:20px;"
+               href="http://habrahabr.ru/users/mavrin/">Хабр (http://habrahabr.ru/users/mavrin/)</a><br>
+        </div>
     </div>
 </section>
 <!--
