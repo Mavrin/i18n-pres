@@ -90,7 +90,7 @@
 </section>
 <section class="slide shout">
     <div>
-        <h2 class="px-50">По-испански &mdash; «Но ва» означает «не едет».</h2>
+        <h2 class="px-70">По-испански &mdash; «не едет»</h2>
     </div>
 </section>
 <section class="slide shout">
@@ -100,9 +100,11 @@
 </section>
 <!--<section class="slide">
     <div>
-        Интернационализа́ция (англ. internationalization) — технологические приёмы разработки, упрощающие адаптацию
-        продукта (такого как программное или аппаратное обеспечение) к языковым и культурным особенностям региона
-        (регионов), отличного от того, в котором разрабатывался продукт.
+        <blockquote><p>
+            <b>Интернационализа́ция</b> (англ. internationalization) — технологические приёмы разработки, упрощающие адаптацию
+            продукта (такого как программное или аппаратное обеспечение) к языковым и культурным особенностям региона
+            (регионов), отличного от того, в котором разрабатывался продукт.
+        </p></blockquote>
     </div>
 </section>-->
 <section class="slide shout">
@@ -112,8 +114,10 @@
 </section>
 <!--<section class="slide">
     <div>
-        Локализация — процесс адаптации программного обеспечения к культуре какой-либо страны.
-        Как частность — перевод пользовательского интерфейса, документации и сопутствующих файлов программного обеспечения с одного языка на другой.
+        <blockquote><p>
+            <b>Локализация</b> — процесс адаптации программного обеспечения к культуре какой-либо страны.
+            Как частность — перевод пользовательского интерфейса, документации и сопутствующих файлов программного обеспечения с одного языка на другой.
+        </p></blockquote>
     </div>
 </section>-->
 <section class="slide shout">
@@ -137,12 +141,12 @@
 </section>
 <section class="slide">
     <div>
-        <h2>Различие локалей:</h2>
+        <h2>Различие локалей</h2>
         <ul>
-            <li class="next">Фразы (tree - дерево - дрэва)</li>
-            <li class="next">Числа (123.456,789 - 123 456,789)</li>
-            <li class="next">Валюта (123.456,79 € - ￥123,457)</li>
-            <li class="next">Даты (1.10.2015 20.00 - 10-1-2015 8 pm)</li>
+            <li class="next">Фразы (tree — дерево — дрэва)</li>
+            <li class="next">Числа (123.456,789 — 123 456,789)</li>
+            <li class="next">Валюта (123.456,79 € — ￥123,457)</li>
+            <li class="next">Даты (1.10.2015 20.00 — 10-1-2015 8 pm)</li>
             <li class="next">Направление текста и размещение блоков
                 <!--примеры-->
                 <ul>
@@ -300,7 +304,7 @@
     <div>
         <h2 class="px-70">Спасибо браузерам <a
                     href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Intl">intl</a>
-            api.</h2>
+            API</h2>
     </div>
 </section>
 <section class="slide">
@@ -374,7 +378,7 @@
 </section>
 <section class="slide">
     <div>
-        <h2><img style="height: 1em; vertical-align: middle" src="pictures/safari.svg" alt=""/> Safari not supported</h2>
+        <h2><img style="height: 1em; vertical-align: middle" src="pictures/safari.svg" alt=""/> Safari не поддерживается</h2>
 
         <p>Но есть полифил <a href="https://github.com/andyearnshaw/Intl.js">Intl.js</a></p>
     </div>
@@ -483,10 +487,10 @@
 <section class="slide">
     <div>
         <h2 class="px-500">
-            Больше примеров и подробностей.
+            Больше примеров и подробностей
         </h2>
         <p>
-          Доклад Антона Немцева на WSD <a href="http://webstandardsdays.ru/2014/05/24/pres/i18n-l20n/">Фреймворки локализации</a>
+          Доклад <a href="http://webstandardsdays.ru/2014/05/24/pres/i18n-l20n/">Фреймворки локализации</a> Антона Немцева на WSD
         </p>
         <div style="display: flex">
             <img style="margin: auto;height: 260px;" src="pictures/hex.svg" alt=""/>
@@ -659,14 +663,14 @@ var message = __('Hello world');
 </section>
 <section class="slide shout">
     <div>
-        <h2 class="px-90">К примеру у нас есть следующий код</h2>
+        <h2 class="px-90">К примеру, у нас есть следующий код</h2>
     </div>
 </section>
 <section class="slide">
     <div>
         <h2>HTML</h2>
         <pre>
-            <code style="font-size: 14px" class="scala">
+            <code style="font-size: 19px" class="scala">
 &lt;span class="ui-label-remain ui-progressbar__data__remain"&gt;
     &lt;%= fn.intl.formatHTMLMessage('Remain {timeRemain}',
         {
@@ -692,10 +696,10 @@ var message = __('Hello world');
     <div>
         <h2>JavaScript</h2>
         <pre>
-            <code style="font-size: 15px" class="javascript">
+            <code style="font-size: 22px" class="javascript">
   var tooltipTextMap = {
-    'board': intl.formatMessage('Make this View visible to all or selected teams'),
-    'group': intl.formatMessage('Make this Group visible to all or selected teams')
+    'board': intl.formatMessage('Make this View visible…'),
+    'group': intl.formatMessage('Make this Group visible…')
   };
             </code>
         </pre>
@@ -713,7 +717,7 @@ var message = __('Hello world');
 </section>
 <section class="slide">
     <div>
-        <h2>Задаем контекст для компонента, шаблона, js-файла</h2>
+        <h2>Контекст для компонента, шаблона, JS-файла</h2>
         <ul>
             <li class="next">Файл на уровне компонента .scope.json <img style="vertical-align: middle" src="pictures/folder.png" alt=""/></li>
             <li class="next">Комментарием в JavaScript файле <pre><code class="javascript">     // intlScope:'customScope'</code></pre></li>
@@ -752,7 +756,7 @@ var message = __('Hello world');
         <img  style="position: absolute; top: 80px;" src="pictures/npm.svg" alt=""/>
         <img style="position: absolute;bottom: 20px;right: 389px;" src="pictures/bower.svg" alt=""/>
         <img style="position: absolute;right: 61px;top: 0;" src="pictures/jspm.svg" alt=""/>
-        <h2 class="px-50">JSON файлы в отдельном пакете.</h2>
+        <h2 class="px-50">JSON-файлы в отдельном пакете</h2>
     </div>
 </section>
 <section class="slide">
@@ -772,7 +776,11 @@ var message = __('Hello world');
 </section>
 <section class="slide shout">
     <div>
-        <h2 class="px-60">Репозиторий: удобно для разработчика, неудобно для переводчика.</h2>
+        <h2 class="px-80">
+            Репозиторий:<br>
+            удобно для разработчика,<br>
+            неудобно для переводчика.
+        </h2>
     </div>
 </section>
 <section class="slide">
@@ -790,14 +798,15 @@ var message = __('Hello world');
 <section class="slide shout">
     <div>
         <h2 style="font-size: 50px">
-            Пишем <a href="https://github.com/TargetProcess/transifex-github-integration-web">сервис</a> <img style="height: 1em; vertical-align: middle" src="pictures/github-octocat.svg" alt=""/> автоматизации процесса.
+            Пишем <a href="https://github.com/TargetProcess/transifex-github-integration-web">сервис</a><br>
+            <img style="height: 1em; vertical-align: middle" src="pictures/github-octocat.svg" alt=""/> автоматизации процесса
         </h2>
     </div>
 </section>
 <section class="slide">
     <div>
         <h2>
-            При выпуске новой версии продукта.
+            При выпуске новой версии продукта
         </h2>
 <pre>
     <code class="json">
@@ -813,7 +822,7 @@ var message = __('Hello world');
 <section class="slide shout">
     <div>
         <h2 class="px-100">
-            Безопасность.
+            Безопасность
         </h2>
     </div>
 </section>
@@ -827,7 +836,7 @@ var message = __('Hello world');
 </section>
 <section class="slide">
     <div>
-        <h2 style="font-size: 40px">Переводчик может добавить script в вашу фразу</h2>
+        <h2 style="font-size: 40px">Переводчик может добавить &lt;script&gt;</h2>
         <pre style="font-size: 20px">
             <code class="javascript">
     _.escape('&lt;script&gt; alert("Ха") &lt;/script&gt; полезная фраза');
@@ -866,12 +875,12 @@ var message = __('Hello world');
 </section>
 <section class="slide shout">
     <div>
-        <h2 class="px-70">Чистим текст по белому списку.</h2>
+        <h2 class="px-70">Чистим текст по белому списку</h2>
     </div>
 </section>
 <section class="slide">
     <div>
-        <h2 style="font-size: 40px">Если необходимо использовать обработчик, делаем следующее</h2>
+        <h2 style="font-size: 40px">Если нужен обработчик</h2>
 <pre>
     <code class="html">
 &lt;b class="i-role-action"&gt;Кликни меня!&lt;/b&gt;
@@ -884,7 +893,7 @@ var message = __('Hello world');
 </section>
 <section class="slide">
     <div>
-        <h2 style="font-size: 40px">Для React используем FormattedMessage</h2>
+        <h2 style="font-size: 40px">FormattedMessage для React</h2>
 <pre>
     <code class="nohighlight">
 &lt;FormattedMessage
@@ -898,7 +907,7 @@ var message = __('Hello world');
 </section>
 <section class="slide">
     <div>
-        <h2>Автоматизируем процесс нахождения XSS</h2>
+        <h2>Автоматизируем поиск XSS</h2>
         <p>Поможет инструментация кода.</p>
 <pre>
     <code class="javascript">
@@ -911,7 +920,7 @@ formatMessage(stringFromDictionary +
 </section>
 <section class="slide shout">
     <div>
-        <h2 class="px-100">Забытое, но важное.</h2>
+        <h2 class="px-100">Забытое, но важное</h2>
     </div>
 </section>
 <section class="slide">
@@ -923,7 +932,7 @@ formatMessage(stringFromDictionary +
 </section>
 <section class="slide">
     <div>
-        <h2>Личная просьба.</h2>
+        <h2>Личная просьба</h2>
         <p>Не&nbsp;используйте флаги для выбора языков, пишите названия язык на целевом языке пользователя.</p>
         <div style="display: flex;align-items: center;">
             <img style="height: 260px;" src="pictures/16208-flags-icon-sets.jpg" alt=""/>
