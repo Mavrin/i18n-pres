@@ -151,7 +151,7 @@
             <li class="next">Фразы (tree — дерево — дрэва)</li>
             <li class="next">Числа (123.456,789 — 123 456,789)</li>
             <li class="next">Валюта (123.456,79 € — €123,456.79)</li>
-            <li class="next">Даты (1.10.2015 20.00 — 10-1-2015 8 pm)</li>
+            <li class="next">Даты (1.10.2015 20.00 — 10-1-2015 8PM)</li>
             <li class="next">Направление текста и размещение блоков
                 <!--примеры-->
                 <ul>
@@ -201,7 +201,7 @@
         <h2>Решение</h2>
         <ul>
             <li class="next">Динамические блоки</li>
-            <li class="next">Проверям шрифт при локализации <a
+            <li class="next">Проверяем шрифт при локализации <a
                         href="https://www.google.com/fonts#UsePlace:use/Collection:Open+Sans">google fonts</a></li>
             <li class="next">Подходы к решению проблемы форм (<a
                         href="https://github.com/eligrey/l10n.js/#readme">l10n</a>, <a href="http://l20n.org/">l20n</a>,
@@ -321,7 +321,7 @@
 </section>
 <section class="slide shout">
     <div>
-        <h2 class="px-70">Спасибо браузерам <a
+        <h2 class="px-70">Спасибо браузерам: <a
                     href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Intl">intl</a>
             API</h2>
     </div>
@@ -385,7 +385,7 @@
     console.log(new Intl.NumberFormat('de-DE').format(number));
     // → 123.456,789
     // В России в качестве разделителя целой и дробной части используется запятая,
-    //а в качестве разделителя разрядов - пробел
+    // а в качестве разделителя разрядов - пробел
     console.log(new Intl.NumberFormat('ru-RU').format(number));
     // → 123 456,789
     // В большинстве арабоговорящих стран используют настоящие арабские цифры
@@ -473,7 +473,7 @@ console.log(russian.format(post.date)); // => "3 часа назад"
         <pre>
             <code class="css">
     {
-        unicode-bidi:bidi-override;
+        unicode-bidi: bidi-override;
         direction: rtl;
     }
             </code>
@@ -486,7 +486,7 @@ console.log(russian.format(post.date)); // => "3 часа назад"
         <pre>
             <code class="css">
     {
-        writing-mode:vertical-lr
+        writing-mode: vertical-lr
     }
             </code>
         </pre>
@@ -543,7 +543,7 @@ console.log(russian.format(post.date)); // => "3 часа назад"
 <section class="slide">
     <div>
         <h2 class="px-500">
-            Еще примеры
+            Ещё примеры
         </h2>
         <p>
           Доклад <a href="http://webstandardsdays.ru/2014/05/24/pres/i18n-l20n/">Фреймворки локализации</a> Антона Немцева на WSD
@@ -556,7 +556,7 @@ console.log(russian.format(post.date)); // => "3 часа назад"
 
 <section class="slide shout">
     <div>
-        <h2 class="px-80">Давайте перейдем к коду</h2>
+        <h2 class="px-80">Давайте перейдём к коду</h2>
     </div>
 </section>
 <section class="slide">
@@ -657,7 +657,7 @@ var message = __('greeting.message');
 </section>
 <section class="slide">
     <div>
-        <h2>Ключами является оригинальная фраза</h2>
+        <h2>Ключом является оригинальная фраза</h2>
 
         <div>
             <pre>
@@ -665,7 +665,7 @@ var message = __('greeting.message');
 var message = __('Hello world');
 /**
 Метод ищет фразу в некотором dict,
-если не нашел возвращает оригинальную фразу
+если не нашел - возвращает оригинальную фразу
 **/
                 </code>
             </pre>
@@ -767,7 +767,7 @@ var message = __('Hello world');
         <p><a href="https://github.com/TargetProcess/tau-extract-gettext">tau-extract-gettext</a> <img style="height: 1em; vertical-align: middle" src="pictures/github-octocat.svg" alt=""/> </p>
 
         <p>
-            Работает на регулярных выражения и любви. Для jsx используется AST parser.
+            Работает на регулярных выражения и любви. Для JSX используется AST parser.
         </p>
     </div>
 </section>
@@ -776,8 +776,8 @@ var message = __('Hello world');
         <h2>Контекст для компонента, шаблона, JS-файла</h2>
         <ul>
             <li class="next">Файл на уровне компонента .scope.json <img style="vertical-align: middle" src="pictures/folder.png" alt=""/></li>
-            <li class="next">Комментарием в JavaScript файле <pre><code class="javascript">     // intlScope:'customScope'</code></pre></li>
-            <li class="next">Комментарием в шаблоне файле <pre><code class="html">     &lt;!--intlScope:customScope--&gt;</code></pre></li>
+            <li class="next">Комментарием в JavaScript-файле <pre><code class="javascript">     // intlScope:'customScope'</code></pre></li>
+            <li class="next">Комментарием в файле шаблона <pre><code class="html">     &lt;!--intlScope:customScope--&gt;</code></pre></li>
         </ul>
     </div>
 </section>
@@ -801,15 +801,15 @@ var message = __('Hello world');
 </section>
 <section class="slide">
     <div>
-        <h2>Все на клиенте</h2>
+        <h2>Всё на клиенте</h2>
 <pre>
     <code class="javascript">
 var response = {
-    message: "You add {count} user story.",
+    message: "You've added {count} user stories.",
     data: {count: 10}
 }
 intl.formatMessage(response.message, data);
-// You add 10 user story.
+// You've added 10 user stories.
     </code>
 </pre>
     </div>
@@ -821,7 +821,7 @@ intl.formatMessage(response.message, data);
 </section>
 <section class="slide shout">
     <div>
-        <img  style="position: absolute; top: 80px;" src="pictures/npm.svg" alt=""/>
+        <img style="position: absolute; top: 80px;" src="pictures/npm.svg" alt=""/>
         <img style="position: absolute;bottom: 20px;right: 389px;" src="pictures/bower.svg" alt=""/>
         <img style="position: absolute;right: 61px;top: 0;" src="pictures/jspm.svg" alt=""/>
         <h2 class="px-50">JSON-файлы переводов в отдельном пакете</h2>
@@ -878,7 +878,7 @@ intl.formatMessage(response.message, data);
 </section>
 <section class="slide shout">
     <div>
-        <img  style="position: absolute; top: 33px; height: 237px" src="pictures/jenkins.svg" alt=""/>
+        <img style="position: absolute; top: 33px; height: 237px" src="pictures/jenkins.svg" alt=""/>
         <img style="position: absolute; height: 209px;bottom: 44px; right: 389px;" src="pictures/travis-ci.svg" alt=""/>
         <img style="position: absolute;right: 61px; height:300px; top: 0;" src="pictures/logo_teamcity.svg" alt=""/>
         <h2 class="px-60" >Запускаем сервисы с помощью CI</h2>
